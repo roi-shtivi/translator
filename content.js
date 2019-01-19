@@ -20,7 +20,8 @@ function processResponse(xhr) {
 		    htmlObject.innerHTML = xhr.responseText;
 			var translations = htmlObject.getElementsByClassName("normal_translation_div");
 		    for (var i=0; i< translations.length; i++){
-		    	console.log(translations[i].innerHTML);
+		    	var trans = translations[i].innerHTML;
+		    	console.log(trans.replace(/<span class=\"clearOutputLanguageMeaningsString\">; <\/span>/g, ";"));
 		    }
 		}
 	}
