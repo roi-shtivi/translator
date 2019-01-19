@@ -2,7 +2,7 @@
   "name": "Translator",
   "version": "1.0",
   "description": "Translate your selected text!",
-  "permissions": ["contextMenus", "declarativeContent"],
+  "permissions": ["contextMenus", "declarativeContent", "http://www.morfix.co.il/"],
   "background": {
 	  "scripts": ["background.js"],
 	  "persistent": false
