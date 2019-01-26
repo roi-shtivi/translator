@@ -19,10 +19,12 @@ function processResponse(xhr) {
 		    var htmlObject = document.createElement('div');
 		    htmlObject.innerHTML = xhr.responseText;
 			var translations = htmlObject.getElementsByClassName("normal_translation_div");
+			var res = [];
 		    for (var i=0; i< translations.length; i++){
 		    	var trans = translations[i].innerHTML;
-		    	console.log(trans.replace(/<span class=\"clearOutputLanguageMeaningsString\">; <\/span>/g, ";"));
+		    	res[i] = (trans.replace(/<span class=\"clearOutputLanguageMeaningsString\">; <\/span>/g, ";"));
 		    }
+		    alert(res);
 		}
 	}
 }

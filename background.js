@@ -21,7 +21,6 @@ chrome.runtime.onInstalled.addListener(function() {
 chrome.contextMenus.onClicked.addListener(function(info) {
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     chrome.tabs.sendMessage(tabs[0].id, {command: "translate", selection: info.selectionText}, function(response) {
-      console.log(response.trans_selection);
     });
   });
 });
