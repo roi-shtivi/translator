@@ -16,9 +16,9 @@ function makeCall(word) {
 function processResponse(xhr) {
     return function(){
         if (xhr.readyState == XMLHttpRequest.DONE) {
-            var htmlObject = document.createElement('div');
-            htmlObject.innerHTML = xhr.responseText;
-            var translations = htmlObject.getElementsByClassName("normal_translation_div");
+            const parser = new DOMParser();
+            const parsedDoc = parser.parseFromString(xhr.responseText, 'text/html');
+            var translations = parsedDoc.getElementsByClassName("normal_translation_div");
             var res = [];
             for (var i=0; i< translations.length; i++){
                 var trans = translations[i].innerHTML;
