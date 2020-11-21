@@ -10,9 +10,10 @@ chrome.runtime.onMessage.addListener(
 function makeCall(word) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = processResponse(xhr);
-    xhr.open("GET", 'https://school.morfix.co.il/' + word, true);
-    xhr.send(null);
+    xhr.open("GET", 'https://www.morfix.co.il/' + word, true);
+    xhr.send();
 }
+
 function processResponse(xhr) {
     return function(){
         if (xhr.readyState == XMLHttpRequest.DONE) {

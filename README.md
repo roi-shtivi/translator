@@ -1,4 +1,4 @@
-Chrome extension that help translate selected words (Hebrew <-> English) using `school.morfix.co.il`.
+Chrome extension that help translate selected words (Hebrew <-> English) using `morfix.co.il`.
 
 #### Local installtion
 
